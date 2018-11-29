@@ -9,7 +9,7 @@ namespace TwilioApiClient
     {
         private const string Identifier = "Twilio";
         
-        public static IServiceCollection AddActiveCampaignApiClient(this IServiceCollection services,
+        public static IServiceCollection AddTwilioApiClient(this IServiceCollection services,
             IConfiguration configuration)
         {
             services.AddOptions();
