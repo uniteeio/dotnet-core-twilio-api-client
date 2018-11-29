@@ -27,7 +27,7 @@ Add TwilioApiClient service in your Startup.cs file :
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-    <b>services.AddTwilioApiClient(Configuration); </b>
+    <b>services.AddTwilioApiClientService(Configuration); </b>
 }
 </pre>
         
