@@ -3,6 +3,12 @@
 Nuget package can be found here : https://www.nuget.org/packages/Unitee.Twilio.ApiClient
 
 ## Usage for a dotnet core mvc application
+
+### Install package
+
+dotnet add package Unitee.Twilio.ApiClient
+
+
 ### Configuration
 
 Add Twilio AccountSid and AuthToken in the root of your appsettings.json :
@@ -16,7 +22,8 @@ Add Twilio AccountSid and AuthToken in the root of your appsettings.json :
   },
   <b>"Twilio": {
     "AccountSid": "ABCDEF123456",
-    "AuthToken": "a5ze5rty123qs3df3gh"
+    "AuthToken": "a5ze5rty123qs3df3gh",
+    "SenderPhoneNumber": "+3365454545"
   }</b>
 }
 </pre>
@@ -48,7 +55,6 @@ Use SendSms method to send an SMS :
 public async Task<ActionResult<MessageResource>> Get()
 {
     return await _twilioApiClient.SendSms(
-            "+3365454545", //senderPhoneNumber
             "+3378989898", //receiverPhoneNumber
             "Hello from +3365454545" //smsBody
             new Dictionary<string, string> {{"ids", "all"}}

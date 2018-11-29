@@ -4,7 +4,6 @@ using Twilio.Rest.Api.V2010.Account;
 using Twilio.Rest.Proxy.V1.Service.Session.Participant;
 using Twilio.Types;
 using TwilioApiClient.Exceptions;
-using TwilioApiClient.Extensions;
 
 namespace TwilioApiClient
 {
@@ -17,7 +16,7 @@ namespace TwilioApiClient
             _options = options;
         }
 
-        public async Task<MessageResource> SendSms(string senderPhoneNumber, string receiverNumber, string smsBody)
+        public async Task<MessageResource> SendSms(string receiverNumber, string smsBody)
         {
             TwilioClient.Init(_options.AccountSid, _options.AuthToken);
 
@@ -28,7 +27,7 @@ namespace TwilioApiClient
 
             var message = MessageResource.Create(
                 body: smsBody,
-                from: new PhoneNumber(senderPhoneNumber),
+                from: new PhoneNumber(_options.SenderPhoneNumber),
                 to: new PhoneNumber(receiverNumber)
             );
 

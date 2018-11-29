@@ -5,6 +5,6 @@ namespace TwilioApiClient
 {
     public interface ITwilioApiClient
     {
-        Task<MessageResource> SendSms(string senderPhoneNumber, string receiverNumber, string smsBody);
+        Task<MessageResource> SendSms(string receiverNumber, string smsBody);
     }
 }
