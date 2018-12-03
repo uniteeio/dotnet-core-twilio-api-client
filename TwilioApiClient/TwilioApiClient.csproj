@@ -4,9 +4,9 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <Authors>FabienP, Unitee</Authors>
         <PackageId>Unitee.Twilio.ApiClient</PackageId>
-        <Version>1.1.1</Version>
+        <Version>1.1.2</Version>
         <NeutralLanguage>en-US</NeutralLanguage>
-        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionPrefix>1.1</VersionPrefix>
         <Title>.NET Core Twilio API client</Title>
         <Description>A .NET Core api client for Twilio API</Description>
         <PackageProjectUrl>https://www.nuget.org/packages/Unitee.Twilio.ApiClient/</PackageProjectUrl>
